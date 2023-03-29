@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#f9f9f9" />
+        <link rel="stylesheet" href="./style/reset.css" />
+        <link rel="stylesheet" href="./style/style.css" />
+        <title>ChatGPTranslate</title>
+    </head>
+    <body>
+        <header>
+            <h1>ChatGPTranslate</h1>
+        </header>
+        <main>
+            <textarea
+                id="source-text"
+                autocomplete="off"
+                spellcheck="false"
+            ></textarea>
+            <div id="btn-container">
+                <form autocomplete="on">
+                    <button type="button" id="translate-btn" class="" disabled>
+                        Translate
+                    </button>
+                    <select id="target-lang">
+                        <option value="" selected>Select a language</option>
+                    </select>
+                    <select id="style-select"></select>
+                    <input
+                        placeholder="OpenAI API Key"
+                        type="password"
+                        id="api-key"
+                    />
+                </form>
+            </div>
+            <textarea
+                id="target-text"
+                placeholder="Translation"
+                autocomplete="off"
+                spellcheck="false"
+                readonly
+            ></textarea>
+            <p id="completion-info">
+                The number of tokens used and the fee are displayed here. (1k
+                tokens = 0.002 USD, 1 USD = 130 JPY)
+            </p>
+        </main>
+        <!-- <footer>
+                <p>Copyright &copy; 2023</p>
+        </footer> -->
+        <script src="./script/core.js"></script>
+        <script src="./script/main.js"></script>
+    </body>
+</html>
